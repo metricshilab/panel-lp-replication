@@ -1,21 +1,25 @@
-# Panel Local Projection
+# Replication: Panel Local Projection
 
 
-This repository hosts the replication package 
+This repository hosts a replication package for
 
-* Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), "Nickell Bias in Panel Local Projection", *Journal of International Economics*. [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)].
+* Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), "Nickell Bias in Panel Local Projection," *Journal of International Economics*. [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)].
 
 The replication code is written in R.
 
+## Empirical Applications
 
-It offers an `R` function to implement the panel local projection that includes two methods: 
+The `applications` folder contains the data and code for empirical applications. The main file is `replication.ipynb`, which displays all the results.
+
+## R Package
+
+A companion [R package](https://github.com/zhentaoshi/panel-local-projection) provides functions to implement the estimation method.
+
+## Contributors
+
+* Shen Shu
 
 
-### Contributors 
-
-Shen Shu
-
-
-### License
+## License
 
 This work is licensed under the MIT License.
