@@ -24,9 +24,9 @@ An R environment is provided at [DockerHub](https://hub.docker.com/repository/do
 
 Steps:
 
-1. Open a cloud server
+1. Open a cloud server, for example `github/codespaces`
 2. Pull the image `docker pull ztshi/plp:v0.3`
-3. Start the image. The port will be `8888`
+3. Run the image. The port will be `8888`
 4. In the web browser of jupyter interface, if login information is needed, copy the `string` after `http://127.0.0.1:8888/?token=<long_token_string>`
 5. Done
 
