@@ -17,6 +17,15 @@ A companion [R package](https://github.com/zhentaoshi/panel-local-projection) pr
 
 ## Docker Environment
 
+### DockerHub
+
+An R environment is provided at [DockerHub](https://hub.docker.com/repository/docker/ztshi/plp)
+
+```bash
+docker pull ztshi/plp:v0.3
+```
+
+### Local environment
 To run the R notebook in a fully reproducible environment, build the Docker image from the repository root:
 
 ```bash
@@ -38,7 +47,7 @@ All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the ima
 
 ## Contributors
 
-* Shen Shu, Shi Zhentao
+* [Pan Ji](https://github.com/PanJi-0), [Shen Shu](https://github.com/shenshuuu), [Shi Zhentao](https://github.com/PanJi-0)
 
 
 ## License
