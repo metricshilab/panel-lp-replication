@@ -21,9 +21,14 @@ A companion [R package](https://github.com/zhentaoshi/panel-local-projection) pr
 
 An R environment is provided at [DockerHub](https://hub.docker.com/repository/docker/ztshi/plp)
 
-```bash
-docker pull ztshi/plp:v0.3
-```
+
+Steps:
+
+1. Open a cloud server
+2. Pull the image `docker pull ztshi/plp:v0.3`
+3. Start the image. The port will be `8888`
+4. In the web browser of jupyter interface, if login information is needed, copy the `string` after `http://127.0.0.1:8888/?token=<long_token_string>`
+5. Done
 
 ### Local environment
 To run the R notebook in a fully reproducible environment, build the Docker image from the repository root:
