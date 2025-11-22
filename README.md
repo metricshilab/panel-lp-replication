@@ -19,16 +19,15 @@ A companion [R package](https://github.com/zhentaoshi/panel-local-projection) pr
 
 ### DockerHub
 
-An R environment is provided at [DockerHub](https://hub.docker.com/repository/docker/ztshi/plp)
+An R environment is provided at [DockerHub](https://hub.docker.com/repository/docker/ztshi/plp). It can run in `Github`'s `codespaces` directly (Install a Jupyter Kernel extension in the remote vscode if popped up.)
 
-
-Steps:
+<!-- Steps:
 
 1. Open a cloud server, for example `github/codespaces`
 2. Pull the image `docker pull ztshi/plp:v0.3`
 3. Run the image. The port will be `8888`
 4. In the web browser of jupyter interface, if login information is needed, copy the `string` after `http://127.0.0.1:8888/?token=<long_token_string>`
-5. Done
+5. Done -->
 
 ### Local environment
 To run the R notebook in a fully reproducible environment, build the Docker image from the repository root:
@@ -46,7 +45,7 @@ docker run --rm -it -p 8888:8888
   panel-lp-replication
 ```
 
-The container will print a URL containing the token (or the `JUPYTER_TOKEN` you supplied). Open that link in a browser to access JupyterLab, then open `applications/replication.ipynb`. Set the working directory in the first code cell to `/home/jovyan/work/applications` (or simply remove the `setwd` call) so that the notebook can load the CSV files.
+The container will print a URL containing the token (or the `JUPYTER_TOKEN` you supplied). Open that link in a browser to access JupyterLab, then open `applications/replication.ipynb`.
 
 All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the image. Feel free to adjust the `docker run` command (e.g., mount a different volume or change the exposed port) if needed.
 
