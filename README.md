@@ -59,6 +59,7 @@ The container will print a URL containing the token (or the `JUPYTER_TOKEN` you 
 ## Contributors
 
 * [Pan Ji](https://github.com/PanJi-0), [Shen Shu](https://github.com/shenshuuu), [Shi Zhentao](https://github.com/zhentaoshi)
+* Please contact [Shen Shu](https://github.com/shenshuuu) if you have any inquiries.
 
 
 ## License
