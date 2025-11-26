@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+% \usepackage{parskip}
+\usepackage{natbib}
+\usepackage{setspace}
+
+
+\title{Nickell Bias in Panel Local Projection: \\Financial Crises Are Worse Than You Think}
+\author{Ziwei Mei, Liugang Sheng, Zhentao Shi}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\onehalfspacing
+
+\section{Motivation}
+
+In recent years, Local projection (LP) \citep{jorda2005estimation} has been one of the most important estimation techniques in macroeconomics. 
+Panel LP (pLP) with country fixed effects (FE) is a standard tool for measuring how financial crises affect output. The approach regresses $y_{i,t+h}$ on crisis indicators $x_{i,t}$ and absorbs unit heterogeneity with FE. The paper shows that, even when $x_{i,t}$ does not contain lagged $y_{i,t}$, the dynamic structure inherent in predictive specifications makes the fixed-effects estimator suffer from the Nickell bias. 
+The nominal rejection probability of the $t$-tests from the FE estimator no longer matches the empirical rejection probabilities.
+In practice, FE understates crisis-driven output losses.
+
+
+\section{Intrinsic Nickell Bias}
+
+To demonstrate the presence of the Nickell bias, We study a panel VAR(1) prototype:
+\begin{align*}
+ y_{i,t+1} &= \mu_i^{(0)y} + \beta^{(0)} x_{i,t+1} + u_{i,t+1}^y, \\
+ x_{i,t+1} &= \mu_i^x + \rho x_{i,t} + u_{i,t+1}^x .
+\end{align*}
+Iterating the system implies $y_{i,t+h}$ depends on current and lagged innovations in $x_{i,t}$, so the composite error $e_{i,t+h}^{(h)}$ in the pLP regression
+$$
+y_{i,t+h} = \mu_i^{(h)y} + \beta^{(h)} x_{i,t} + u_{i,t+h}^y, \quad h \in \{1,2 \ldots, H\} 
+$$
+is only \emph{weakly exogenous}: $\mathbb{E}[e_{i,t+h}^{(h)} \mid \mathbf{x}_i^T] \neq 0$ whenever $\beta^{(0)} \neq 0$. 
+
+
+However, the unbiasedness of the FE estimator requires \emph{strict exogeneity}. 
+Proposition~1 of the paper derives the analytic bias of $\hat{\beta}^{(h) }$:
+\[
+\hat{\beta}^{(h) } \stackrel{a}{\sim} \beta^{(h)} - \frac{\mathrm{bias}}{T} + \frac{\mathrm{Normal(0)}}{\sqrt{N T}},
+\]
+where ``$\mathrm{bias}$'' is a non-zero constant, and ``$\mathrm{Normal(0)}$'' is a normally distributed random variable with finite variance and centered at 0.
+The bias is order $1/T$ and does not vanish in the joint limit with $N/T \to c$. Positive persistence ($\rho>0$) yields \emph{attenuation} ($\hat{\beta}^{(h) }$ is biased toward zero), the distortion enlarges with the horizon $h$ and with more persistent crisis indicators, and $t$-statistics remain shifted even with known asymptotic variances.
+
+\section{Split-Panel Jackknife}
+To remove the leading bias, we recommend the split-panel jackknife (SPJ):
+\begin{equation}\label{eq:spj}
+\tilde{\beta} = 2 \hat{\beta}^{(h) } - \frac{\hat{\beta}^{(h) }_a + \hat{\beta}^{(h) }_b}{2},    
+\end{equation}
+where the subscripts $a$ and $b$ denote usual FE estimates from the first and second halves (over the time dimension) of the panel. 
+
+
+If the main regression has multiple control variables in the specification
+$$
+y_{i,t+h} = \mu_i^{(h)y} + \beta^{(h)\prime} \mathbf{x}_{i,t} + u_{i,t+h}^y, \quad h \in \{1,2 \ldots, H\} 
+$$
+where $\mathbf{x}_{i,t}$ is a $K$-dimensional regressor, and thus $\beta^{(h)}$ is a $K$-dimensional parameter, the procedure is the same, with the three FE estimates in \eqref{eq:spj}. 
+Under standard law-of-large-numbers and CLT conditions with $N/T^3 \to 0$, our paper's Theorem~1 shows
+\[
+\sqrt{N T}(\tilde{\beta}^{(h)} - \beta^{(h)}) \Rightarrow \mathcal{N}(0, \mathbf{\Sigma}),
+\]
+where $\mathbf{\Sigma}$ is a $K\times K$ matrix of the asymptotic variance. 
+SPJ is asymptotically unbiased and delivers valid $t$-test and Wald test. The estimator preserves the appeal of LPs---researchers still specify only the predictive regression.
+
+Practically, we recommend SPJ for panels with $T \ge 30$ and $N/T \le 10$.
+
+\section{Empirical Implications}
+Revisiting four influential cross-country crisis studies, the SPJ-based impulse responses exhibit larger and more persistent output losses than those implied by fixed effects. Hence, the conventional FE local projection systematically understates how severe and long-lasting financial crises are.
+
+\section{Takeaway}
+
+In pLP regressions, we argue against the widely used FE estimator due to the intrinsic Nickell bias in the dynamic setting. 
+We recommend the SPJ estimator. It is easy to implement, and maintains the validity of the usual $t$-statistic-based hypothesis testing procedure.
+
+
+We provide an R package for users to carry out the SPJ estimation with a one-line command. 
+
+\singlespacing 
+\bibliographystyle{chicagoa}
+\small
+
+\bibliography{FELP}
+
+
+\end{document}
