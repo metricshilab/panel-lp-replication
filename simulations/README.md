@@ -6,7 +6,7 @@ This README provides instructions for replicating Figures 1-3 from the paper.
 
 *   **Simulation Scripts**
     *   **`main_simul_LP_N30.R` / `main_simul_LP_N50.R`**: Main scripts to run the simulations for sample sizes $N=30$ and $N=50$.
-    *   `simul_LP.R` / `LP_panel_fe.R`: Helper functions required by the main scripts (do not run these directly).
+    *   `simul_LP.R` / `LP_panel_fe.R`: functions required by the main scripts (do not run these directly).
 
 *   **Data Processing & Visualization**
     *   **`arrange_results.R`**: Aggregates the `.RDS` files into Excel.
