@@ -16,7 +16,9 @@ Ensuring transparent and reproducible results for *"Nickell Bias in Panel Local 
 
 ## What You'll Find Here
 
-- **Applications** - R scripts and notebooks that replicate every empirical result in seconds.
+- **[Paper Summary](https://github.com/metricshilab/panel-lp-replication/blob/main/paper_summary.pdf)** - Non-technical minimum summary of the paper, with recommended procedure for applications
+
+- **Empirical Examples** - R scripts in Jupyter notebook that replicate every empirical result in seconds.
 - **Simulations** - Monte Carlo experiments behind the paper's main and appendix figures.
 - **Docker workflow** - A hardened reproduction environment with every dependency baked in.
 
