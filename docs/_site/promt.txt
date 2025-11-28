@@ -1,0 +1,9 @@
+In this folder "docs", create a Jekyll style webpage for this replication package of an academic paper. It will be deployed as GitHub Pages. 
+
+The information of the paper and the contents of the repo is described in "README.md". 
+
+The new front page should have at least two items in the navigation bar.
+1. The package's contents.
+2. The information about using docker for strong replication.
+
+Keep links to the outside R and Stata packages into the index page.
