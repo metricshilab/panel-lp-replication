@@ -6,7 +6,7 @@ color_scheme: light
 search_enabled: true
 aux_links:
   "View on GitHub":
-    - "https://metricshilab.github.io/panel-lp-replication/"
+    - "https://github.com/metricshilab/panel-lp-replication"
 
 plugins:
   - jekyll-remote-theme
