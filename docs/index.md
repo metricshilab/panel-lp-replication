@@ -8,10 +8,10 @@ permalink: /
 # Panel Local Projection Replication
 {: .fs-9 }
 
-Ensuring transparent and reproducible results for *"Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think."*
+Ensuring transparent and reproducible results for *"[Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think](https://www.sciencedirect.com/science/article/abs/pii/S0022199625001679)."*
 {: .lead }
 
-> Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), *Journal of International Economics*
+> Ziwei Mei, Liugang Sheng, Zhentao Shi (2026), *Journal of International Economics*, 104210.
 > [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)]
 
 ## What You'll Find Here
