@@ -24,10 +24,11 @@ In short:
 
 ## Packages
 
+* [Stata package](https://github.com/shenshuuu/panel-local-projection-stata)
+
 * [R package](https://github.com/zhentaoshi/panel-local-projection) provides functions to implement the estimation method.
 
-* [Stata package](https://github.com/shenshuuu/panel-local-projection-stata) is under construction.
-
+* [Python package](https://github.com/zhentaoshi/panel-local-projection-py) is a replica of the R package
 
 ## Docker Environment
 
